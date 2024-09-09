@@ -15,12 +15,17 @@ app-card-country {
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 4rem;
 
   &-search {
-    width: 50%;
+    width: 100%;
     color: var(--color-text);
+
+    @media (min-width: 720px) {
+      width: 50%;
+    }
 
     .field {
       display: flex;

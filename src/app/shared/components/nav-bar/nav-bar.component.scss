@@ -9,7 +9,7 @@
   margin: 0;
   border-bottom: 1px solid transparent;
   background-color: var(--color-elements);
-  box-shadow: 0 0 4px var(--color-dark-snow);
+  box-shadow: 0 0 4px var(--color-shadow);
   color: var(--color-text);
 
   @media (min-width: 660px) {
@@ -39,6 +39,7 @@
   }
 
   .btn {
+    padding: 0;
     flex: 1 1 50%;
     color: var(--color-text);
     background-color: var(--color-elements);
