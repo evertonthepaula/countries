@@ -1,0 +1,52 @@
+.grid-gap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px;
+  justify-items: center;
+
+  @media (min-width: 660px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+app-card-country {
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  &-search {
+    width: 50%;
+    color: var(--color-text);
+
+    .field {
+      display: flex;
+      background-color: var(--color-elements);
+      color: var(--color-text);
+
+      >fa-icon {
+        margin-right: 8px;
+        color: var(--color-text);
+      }
+
+      .input {
+        color: var(--color-text);
+        width: 100%;
+      }
+    }
+
+  }
+
+  &-select {
+    >.custom-select {
+      font-size: 1.4rem;
+      border-right: 16px solid transparent;
+      background-color: var(--color-elements);
+      color: var(--color-text);
+      cursor: pointer;
+    }
+  }
+}

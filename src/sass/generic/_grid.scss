@@ -1,0 +1,172 @@
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// ____________________________________________________________
+// Custom Grid system based in:
+// https://milligram.io/grids.html_____________________________
+//
+// ____________________________________________________________
+// Using flexbox for the grid, inspired by Philip Walton:
+// http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: $max-template-width;
+  padding: 32px 16px;
+  margin: 0 auto;
+
+  &.wrapper {
+    clear: both;
+    box-sizing: border-box;
+    max-width: 1832px;
+    border-radius: 10px;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+
+  &.-no-padding {
+    padding: 0;
+
+    &>.flex {
+      padding: 0;
+    }
+  }
+
+  &.-no-wrap {
+    flex-wrap: nowrap;
+  }
+
+  // Vertically Align Columns
+  // .row-* vertically aligns every .col in the .row
+  &.-top {
+    align-items: flex-start;
+  }
+
+  &.-bottom {
+    align-items: flex-end;
+  }
+
+  &.-center {
+    align-items: center;
+  }
+
+  &.-stretch {
+    align-items: stretch;
+  }
+
+  &.-baseline {
+    align-items: baseline;
+  }
+}
+
+.flex {
+  display: flex;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.f-10 {
+  flex: 1 1 10%;
+}
+
+.f-20 {
+  flex: 1 1 20%;
+}
+
+.f-25 {
+  flex: 1 1 25%;
+}
+
+.f-33,
+.f-34 {
+  flex: 1 1 33.3333%;
+}
+
+.f-40 {
+  flex: 1 1 40%;
+}
+
+.f-50 {
+  flex: 1 1 50%;
+}
+
+.f-60 {
+  flex: 1 1 60%;
+}
+
+.f-66,
+.f-67 {
+  flex: 1 1 66.6666%;
+}
+
+.f-75 {
+  flex: 1 1 75%;
+}
+
+.f-80 {
+  flex: 1 1 80%;
+}
+
+.f-90 {
+  flex: 1 1 90%;
+}
+
+.f-100 {
+  width: 100%;
+}
+
+.align-top {
+  align-self: flex-start;
+}
+
+.align-bottom {
+  align-self: flex-end;
+}
+
+.align-center {
+  align-self: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+@media (max-width: 40rem) {
+  .grid {
+    flex-direction: column;
+    margin-left: -1rem;
+
+    .flex {
+      flex: 0 0 100%;
+      margin-bottom: inherit;
+      padding: 0 1rem;
+    }
+  }
+}

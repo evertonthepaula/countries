@@ -1,0 +1,62 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  // width: 100%;
+  align-items: center;
+  min-height: $btn-height;
+  color: $black;
+  font-size: $btn-font-size;
+  font-family: $btn-family;
+  font-weight: $font-semi-bold;
+  text-decoration: none;
+  background-color: $white;
+  border-color: $white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+
+  @include padding(.5, 2);
+
+  @include margin(0, 0.5);
+
+  &:hover {
+    background-color: $dark-snow;
+  }
+
+  .fa {
+    margin-right: 8px;
+  }
+
+  &.is-black {
+    color: $dark-snow;
+    background-color: $black;
+    border-color: $btn-border-color;
+
+    &:hover {
+      background-color: $smoke;
+    }
+
+    &:focus {
+      outline: solid 1px $smoke;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $smoke;
+    background-color: $snow;
+    border-color: $dark-snow;
+    cursor: not-allowed;
+    opacity: .4;
+
+    &:hover {
+      color: $smoke;
+      background-color: $snow;
+      border-color: $dark-snow;
+      cursor: not-allowed;
+      opacity: .4;
+    }
+  }
+}

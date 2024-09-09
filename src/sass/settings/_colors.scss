@@ -1,0 +1,61 @@
+/*--------------------------------------------------
+                CODA Design system - colors
+----------------------------------------------------*/
+$black: #000;
+$dark: hsl(200, 15%, 8%);
+$dark-smoke: #202c37;
+$smoke: #2b3945;
+$dark-snow: #858585;
+$snow: #fafafa;
+$white: #ffffff;
+
+$red: #e72915;
+$red-dark: #aa0000;
+$red-light: #ffa39a;
+
+$pink: #ee3771;
+$pink-dark: #be175e;
+$pink-light: #f290b1;
+
+$purple: #c464db;
+$purple-dark: #962eaa;
+$purple-light: #cd95d7;
+
+$blue: #5dafff;
+$blue-shine: #0063F7;
+$blue-dark: #167abc;
+$blue-light: #b5e5fb;
+
+$green: #53b873;
+$green-dark: #15955a;
+$green-light: #9dcb6a;
+
+$yellow: #ffcf0f;
+$yellow-dark: #e2ae33;
+$yellow-light: #fce196;
+
+$orange: #fa6a01;
+$orange-dark: #e64e29;
+$orange-light: #ffb25d;
+
+/*--------------------------------------------------
+                Dark Shades colors
+----------------------------------------------------*/
+$dark-shades: (
+  red: $red-dark,
+  pink: $pink-dark,
+  purple: $purple-dark,
+  blue: $blue-dark,
+  green: $green-dark,
+  yellow: $yellow-dark,
+  orange: $orange-dark
+);
+
+:root {
+  --color-black: #{$black};
+  --color-dark-smoke: #{$dark-smoke};
+  --color-smoke: #{$smoke};
+  --color-dark-snow: #{$dark-snow};
+  --color-snow: #{$snow};
+  --color-white: #{$white};
+}

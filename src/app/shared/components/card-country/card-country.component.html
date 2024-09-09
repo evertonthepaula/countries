@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <img [src]="country.flags.png" width="320px" height="168px">
+  </div>
+
+  <div class="card-footer">
+    <h3 class="card-name">{{country.name.common}}</h3>
+
+    <ul class="card-list">
+      <li class="card-list-item">
+        <b>Population:</b>
+        {{country.population}}
+      </li>
+      <li class="card-list-item">
+        <b>Region:</b> {{country.region}}
+      </li>
+      <li class="card-list-item">
+        <b>Capital:</b> {{country.capital}}
+      </li>
+    </ul>
+  </div>
+</div>

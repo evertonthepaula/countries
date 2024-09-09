@@ -1,0 +1,69 @@
+<section class="container">
+
+  <button class="btn btn-back" [routerLink]="['/']">
+    <fa-icon [icon]="faArrowLeft"></fa-icon>
+    Back
+  </button>
+
+  <div class="details">
+
+    @if(isLoading) {
+    <app-loader-spinner />
+    }
+
+    @if(country$ | async; as country) {
+
+    <div class="img">
+      <img [src]="country.flags.svg" alt>
+    </div>
+
+    <div class="info">
+      <h1 class="info-title">{{country.name.common}}</h1>
+
+      <div class="info-list-container">
+        <ul class="info-list">
+          <li class="info-list-item">
+            <b>Native Name:</b> {{country.name.official}}
+          </li>
+          <li class="info-list-item">
+            <b>Population:</b> {{country.population}}
+          </li>
+          <li class="info-list-item">
+            <b>Region:</b> {{country.region}}
+          </li>
+          <li class="info-list-item">
+            <b>Sub Region:</b> {{country.subregion}}
+          </li>
+          <li class="info-list-item">
+            <b>Capital:</b> {{country.capital}}
+          </li>
+        </ul>
+
+        <ul class="info-list">
+          <li class="info-list-item">
+            <b>Top Level Domain:</b>
+            Não encontrado na API
+          </li>
+          <li class="info-list-item">
+            <b>Currencies:</b>
+            @for (currencies of country.currencies; track currencies) {
+            {{currencies.name}}
+            }
+          </li>
+          <li class="info-list-item">
+            <b>Languages:</b>
+            {{country.languages}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="borders">
+        <b>Border Countries:</b>
+        @for (border of country.borders; track border) {
+        <span class="borders-country">{{border}}</span>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>

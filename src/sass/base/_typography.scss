@@ -1,0 +1,63 @@
+html {
+  font-size: 62.5%;
+  font-family: $text-family;
+}
+
+body {
+  font-size: 100%;
+  font-family: $text-family;
+}
+
+h1,
+.title {
+  display: inline-block;
+  max-width: 100%;
+  color: $title-color-primary;
+  font-size: $font-XXlarge;
+  font-family: $title-family;
+  font-weight: $font-regular;
+}
+
+h2,
+.subtitle {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  color: $title-color-primary;
+  font-weight: bold;
+  font-size: $font-large;
+  font-family: $title-family;
+}
+
+h3,
+.title-medium {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  color: $title-color-primary;
+  font-size: $font-large;
+  font-family: $text-family;
+}
+
+h4,
+.title-small {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  color: $dark-snow;
+  font-size: $font-small;
+  font-family: $text-family;
+  font-weight: $font-regular;
+}
+
+p,
+.text {
+  display: block;
+  width: 100%;
+  color: $text-color-primary;
+  font-size: $font-mini;
+}
+
+small {
+  font-size: 100%;
+}

@@ -1,0 +1,11 @@
+label,
+.label {
+  display: inline-block;
+  color: $dark-snow;
+  font-size: $font-mini;
+  background-color: $dark-smoke;
+  transform: translateY(10px);
+
+  @include margin(0, 2);
+  @include padding(0.25);
+}

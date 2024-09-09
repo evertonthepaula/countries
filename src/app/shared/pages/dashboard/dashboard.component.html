@@ -1,0 +1,41 @@
+<section class="container">
+  <div class="filters">
+    <div class="filters-search">
+      <div class="field">
+        <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+
+        <input
+          class="input"
+          type="search"
+          placeholder="Search for a country..."
+          [formControl]="formControlSearch" />
+      </div>
+    </div>
+
+    <div class="filters-select">
+      <select name="region" id="region" class="field custom-select"
+        [formControl]="formControlRegions">
+        <option value selected>Filter by Region</option>
+        <option value="africa">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- @if(isLoading) { -->
+  <app-loader-spinner />
+  <!-- } -->
+
+  @if(listCountries) {
+  <section class="grid-gap">
+    @for (country of listCountries; track country) {
+    <app-card-country [country]="country"
+      [routerLink]="['/details', country.ccn3]" />
+    }
+  </section>
+  }
+
+</section>
